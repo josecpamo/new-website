@@ -57,7 +57,15 @@ body{
 }
 
 .header-link{
-    margin: 2px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.header-link:hover{
+    transform: scale(1.2);
 }
 
 /* Introduction section */
@@ -85,13 +93,15 @@ body{
 /* About me section */
 
 .container{
-    margin-top: 70px;
-    margin-bottom: 70px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: white;
+    border-bottom: 2px black solid;
 }
 
 /* Hamburguer menu */
 
-.btn{
+.fixed-btn{
     display: block;
     width: 64px;
     height: 64px;
@@ -102,30 +112,29 @@ body{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    transition: background-color 0.1s linear, transform .3s ease-in;
+    transition: background-color 0.1s linear;
 }
 
-.btn:hover{
+.fixed-btn:hover{
     background-color: var(--btn-hover-color);
 }
 
 .hamburguer-ctn{
     width: 100%;
     height: 100vh;
-    background-color: black;
     z-index: 30;
+    background-color: black;
     transform: translate(-100%, 0);
 }
 
 .hamburguer-panel{
     width: 400px;
-    max-width: 60%;
     height: 100vh;
+    z-index: 40;
     opacity: .9;
     background-color: var(--bg-color);
     transform: translate(-100%, 0);
     transition: transform .2s ease-in;
-    z-index: 40;
 }
 
 .hamburguer-link{
@@ -146,6 +155,8 @@ body{
 /* Media for phones */
 
 @media (max-width:480px) {
+    
+
     .hamburguer-link{
         font-size: 16px;
     }
@@ -161,7 +172,7 @@ body{
     opacity: .3;
 }
 
-.width80{
+.ctn-width{
     width: 1360px;
     max-width: 80%;
 }
@@ -217,6 +228,7 @@ body{
 }
 
 hr{
+    margin: 0;
     width: 100%;
     border-top: 2px black solid; 
 }
