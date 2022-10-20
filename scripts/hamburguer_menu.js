@@ -1,4 +1,4 @@
-const hamburguerMenu = (container, menu, trigger) => {
+const hamburguerMenu = (container, menu, trigger, link) => {
     const ctn = document.querySelector(container);
     const panel= document.querySelector(menu);
 
@@ -9,6 +9,11 @@ const hamburguerMenu = (container, menu, trigger) => {
         }
 
         if (e.target.matches(container)) {
+            ctn.classList.remove("active");
+            panel.classList.remove("active");
+        }
+
+        if (e.target.matches(link)) {
             ctn.classList.remove("active");
             panel.classList.remove("active");
         }
