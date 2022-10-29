@@ -63,7 +63,7 @@ body{
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
-    transition: transform 0.2s;
+    transition: transform .2s;
 }
 
 .header-link:hover{
@@ -86,20 +86,23 @@ body{
 
 .intro-title{
     color: var(--secondary-color);
-    text-align: center;
+    text-align: left;
     font-size: 32px;
     font-weight: 900;
 }
 
-.intro-logo{
+/* .intro-logo{
     border-radius: 100%;
     width: 256px;
-    height: 300px;
-}
+    height: auto;
+} */
 
 /* About me section */
 
 .container{
+    width: 1360px;
+    max-width: 80%;
+    min-height: 100vh;
     padding-top: 70px;
     padding-bottom: 70px;
     background-color: white;
@@ -123,7 +126,7 @@ body{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    transition: background-color .3s;
+    transition: transform .1s ease, background-color .2s;
 }
 
 .fixed-btn:hover{
@@ -205,11 +208,6 @@ body{
     opacity: .3;
 }
 
-.ctn-width{
-    width: 1360px;
-    max-width: 80%;
-}
-
 .active{
     transform: translate(0,0);
 }
@@ -223,6 +221,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.flex-left{
+    display: flex;
+    justify-content: left;
     align-items: center;
 }
 
@@ -282,8 +286,6 @@ hr{
 }
 
 .skill{
-    display: flex;
-    align-items: center;
     margin: 10px;
 }
 
@@ -333,4 +335,13 @@ hr{
 
 .bar-100{
     width: 100%;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.translate150{
+    transform: translate(0, 150%);
 }

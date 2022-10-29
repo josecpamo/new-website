@@ -1,5 +1,6 @@
 import hamburguerMenu from "./hamburguer_menu.js";
 import menuScroll from "./menu-scroll.js";
+import scrollTop from "./scroll_top.js";
 
 document.addEventListener("DOMContentLoaded", e => {
     hamburguerMenu(
@@ -9,4 +10,5 @@ document.addEventListener("DOMContentLoaded", e => {
       ".hamburguer-link"
     );
     menuScroll();
+    scrollTop();
 })
